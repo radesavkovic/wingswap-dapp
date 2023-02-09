@@ -1,0 +1,48 @@
+body .tippy-tooltip {
+  padding: 12px 16px;
+  background-color: rgba(167, 249, 255, 1);
+  color: #1d1d2d;
+  border-radius: 8px;
+}
+
+body .tippy-popper[x-placement^='bottom'] [x-arrow] {
+  border-bottom-color: rgba(167, 249, 255, 1);
+}
+
+body .tippy-popper[x-placement^='top'] [x-arrow] {
+  border-top-color: rgba(167, 249, 255, 1);
+}
+
+body .tippy-popper[x-placement^='left'] [x-arrow] {
+  border-left-color: rgba(167, 249, 255, 1);
+}
+
+body .tippy-popper[x-placement^='right'] [x-arrow] {
+  border-right-color: rgba(167, 249, 255, 1);
+}
+
+.alert-animate-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.alert-animate-out {
+  animation: slideOut 0.5s ease-in forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
