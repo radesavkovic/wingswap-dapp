@@ -1,0 +1,42 @@
+diff --git a/node_modules/@mattjennings/react-modal/package.json b/node_modules/@mattjennings/react-modal/package.json
+index 6197d14..9dc25dc 100644
+--- a/node_modules/@mattjennings/react-modal/package.json
++++ b/node_modules/@mattjennings/react-modal/package.json
+@@ -3,9 +3,8 @@
+   "author": "Matt Jennings",
+   "version": "1.0.3",
+   "license": "MIT",
+-  "main": "dist/index.js",
+-  "module": "dist/react-modal.esm.js",
+-  "typings": "dist/index.d.ts",
++  "main": "src/index.ts",
++  "module": "src/index.ts",
+   "repository": {
+     "type": "git",
+     "url": "https://github.com/mattjennings/react-modal"
+diff --git a/node_modules/@mattjennings/react-modal/src/Backdrop.tsx b/node_modules/@mattjennings/react-modal/src/Backdrop.tsx
+index 8ad183f..3a5be5f 100644
+--- a/node_modules/@mattjennings/react-modal/src/Backdrop.tsx
++++ b/node_modules/@mattjennings/react-modal/src/Backdrop.tsx
+@@ -3,7 +3,7 @@ import { Box, BoxProps } from 'theme-ui'
+ import { motion, MotionProps } from 'framer-motion'
+ import { useModal } from './ModalContext'
+ 
+-const MotionBox = motion.custom(Box)
++const MotionBox = motion(Box)
+ 
+ export default function Backdrop(props: BoxProps & MotionProps) {
+   const { skipAnimations, isFullScreen } = useModal()
+diff --git a/node_modules/@mattjennings/react-modal/src/Modal.tsx b/node_modules/@mattjennings/react-modal/src/Modal.tsx
+index d77dd1f..e308542 100644
+--- a/node_modules/@mattjennings/react-modal/src/Modal.tsx
++++ b/node_modules/@mattjennings/react-modal/src/Modal.tsx
+@@ -73,7 +73,7 @@ export interface ModalProps extends Omit<BoxProps, 'children'> {
+   }
+ }
+ 
+-const MotionBox = motion.custom(Box)
++const MotionBox = motion(Box)
+ 
+ export default function Modal({
+   allowClose = true,
