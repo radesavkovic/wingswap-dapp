@@ -1,0 +1,10 @@
+{
+  "web3": "Oops! An unknown error occurred. Please refresh the page, or visit from another browser or device.",
+  "CONNECT_WALLET": "Connect wallet",
+  "ENTER_AN_AMOUNT": "Enter an amount",
+  "INVALID_PAIR": "Invalid pair",
+  "INSUFFICIENT_BALANCE": "Insufficient balance",
+  "SELECT_A_TOKEN": "Select a token",
+  "INVALID_RECIPIENT": "Invalid recipient",
+  "ENTER_A_RECIPIENT": "Enter a recipient"
+}

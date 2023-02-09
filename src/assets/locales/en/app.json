@@ -1,0 +1,11 @@
+{
+  "not_found": "Not Found",
+  "swap": "Swap",
+  "pool": "Pool",
+  "chart": "Chart",
+  "chart-overview": "Overview",
+  "chart-pool": "Pool",
+  "chart-token": "Token",
+  "token_count_one": "{{count}} token",
+  "token_count_other": "{{count}} tokens"
+}
