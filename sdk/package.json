@@ -1,0 +1,72 @@
+{
+  "name": "@wingswap/sdk",
+  "license": "MIT",
+  "version": "1.0.10",
+  "description": "🛠 An SDK for building applications on top of Wingswap",
+  "files": [
+    "abis",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slowworks/sdk.git"
+  },
+  "keywords": [
+    "dex",
+    "erc20"
+  ],
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "generate-abis": "ts-node scripts/abis.ts",
+    "compile-external-abi-types": "typechain --target ethers-v5 --out-dir abis/types './abis/**/*.json'",
+    "clean": "rimraf dist",
+    "lint": "eslint --fix --ext .ts",
+    "build": "yarn clean && yarn compile-external-abi-types && rollup -c",
+    "start": "rollup -c -w",
+    "test": "jest"
+  },
+  "dependencies": {
+    "big.js": "6.1.1",
+    "decimal.js-light": "2.5.1",
+    "ethers": "5.5.2",
+    "jsbi": "4.1.0",
+    "tiny-invariant": "1.2.0",
+    "tiny-warning": "1.0.3",
+    "toformat": "2.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "21.0.1",
+    "@rollup/plugin-node-resolve": "13.0.6",
+    "@rollup/plugin-typescript": "8.3.0",
+    "@typechain/ethers-v5": "8.0.5",
+    "@types/big.js": "6.1.2",
+    "@types/jest": "27.0.3",
+    "@types/node": "16.11.11",
+    "@typescript-eslint/eslint-plugin": "5.5.0",
+    "@typescript-eslint/parser": "5.5.0",
+    "eslint": "8.4.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "jest": "27.4.3",
+    "prettier": "2.5.1",
+    "rimraf": "3.0.2",
+    "rollup": "2.60.2",
+    "rollup-plugin-terser": "7.0.2",
+    "ts-jest": "27.1.0",
+    "ts-node": "10.4.0",
+    "tslib": "2.3.1",
+    "typechain": "6.0.5",
+    "typescript": "4.5.2"
+  },
+  "jest": {
+    "preset": "ts-jest"
+  },
+  "bugs": {
+    "url": "https://github.com/slowworks/sdk/issues"
+  },
+  "homepage": "https://github.com/slowworks/sdk#readme"
+}
